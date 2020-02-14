@@ -8,4 +8,11 @@ class Actor < ApplicationRecord
       movie.name
     end
   end
+
+  def costars
+    actors = movies.map {|movie| movie.actors}.flatten.uniq
+    sorted = actors.sort_by {|actor| actor.age}
+    costars = sorted.find_all{|actor| actor.name != self.name}
+    costars.map {|costar| costar.name}
+  end
 end
