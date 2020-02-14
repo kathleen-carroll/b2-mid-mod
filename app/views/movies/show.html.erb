@@ -4,3 +4,10 @@
 <p>Studio: <%= @movie.studio.name %></p>
 <p>Actors: <%= @movie.actor_names.to_sentence %></p>
 <p>Average age of Actors: <%= @movie.avg_actor_age %></p>
+
+<%= %>
+<%= form_tag("/movies/#{@movie.id}/actors", method: :post) do %>
+  <p><%= label_tag :name %>
+     <%= text_field_tag :name %></p>
+     <%= submit_tag "Add Actor"%>
+<% end %>
