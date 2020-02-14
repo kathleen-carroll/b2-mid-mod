@@ -1,0 +1,6 @@
+<h1><%= @movie.name %></h1>
+<p>Year: <%= @movie.creation_year %></p>
+<p>Genre: <%= @movie.genre %></p>
+<p>Studio: <%= @movie.studio.name %></p>
+<p>Actors: <%= @movie.actor_names.to_sentence %></p>
+<p>Average age of Actors: <%= @movie.avg_actor_age %></p>
