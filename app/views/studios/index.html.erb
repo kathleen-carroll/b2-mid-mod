@@ -1,5 +1,8 @@
 <h1>All Studios</h1>
 
 <% @studios.each do |studio| %>
-  <li><%= studio.name %></li>
-<% end %>
+  <dl><%= studio.name %>
+  <dt>Movies: <% studio.movies.each do |movie| %>
+    <dd>- <%= movie.name %></dd>
+    <% end %></dt>
+<% end %></dl>
