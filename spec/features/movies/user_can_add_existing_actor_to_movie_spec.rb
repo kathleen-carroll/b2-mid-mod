@@ -39,7 +39,7 @@ RSpec.describe "When user visits a movie's show page" do
     click_button "Add Actor"
 
     expect(current_path).to eq("/movies/#{movie1.id}")
-    expect(page).to have_content("Actors: #{margot_robbie.name}, #{leo.name}, #{brad_pitt.name}, and #{kate_winslet.name}")
+    expect(page).to have_content("Actors: #{margot_robbie.name}, #{kate_winslet.name}, #{leo.name}, and #{brad_pitt.name}")
     expect(page).to have_content("Average age of Actors: 41.5")
   end
 end

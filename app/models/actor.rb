@@ -3,7 +3,6 @@ class Actor < ApplicationRecord
   has_many :movies, through: :movie_actors
 
   def movie_names
-    # actor = Actor.find(params[:id])
     movies.map do |movie|
       movie.name
     end
