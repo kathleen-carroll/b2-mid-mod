@@ -9,6 +9,6 @@ class Movie < ApplicationRecord
 
   def avg_actor_age
     sum_age = actors.sum {|actor| actor.age}
-    (sum_age/actors.length).round(2)
+    (sum_age/actors.length.to_f).round(3)
   end
 end
