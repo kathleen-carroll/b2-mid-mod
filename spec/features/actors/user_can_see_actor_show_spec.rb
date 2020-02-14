@@ -26,7 +26,7 @@ RSpec.describe "As a user when I visit actor show page" do
 
     expect(page).to have_content("#{margot_robbie.name}")
     expect(page).to have_content("Age: #{margot_robbie.age}")
-    expect(page).to have_content("Movies: #{movie1}, #{movie2}")
+    expect(page).to have_content("Movies: #{movie1.name} and #{movie2.name}")
     expect(page).to_not have_content("#{movie3}")
   end
 end
